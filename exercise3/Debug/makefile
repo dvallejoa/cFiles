@@ -26,7 +26,7 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := exercise sumuert
+BUILD_ARTIFACT_NAME := exercise3
 BUILD_ARTIFACT_EXTENSION :=
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
@@ -34,19 +34,19 @@ BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ART
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: exercise\ sumuert
+all: exercise3
 
 # Tool invocations
-exercise\ sumuert: $(OBJS) $(USER_OBJS) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
+exercise3: $(OBJS) $(USER_OBJS) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc  -o "exercise sumuert" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc  -o "exercise3" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) "exercise sumuert"
+	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) exercise3
 	-@echo ' '
 
 .PHONY: all clean dependents
