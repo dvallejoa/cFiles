@@ -13,3 +13,16 @@ void guardadoArchivo(char *almacenCaracteres){
 	}
 	fclose(archivo);
 }
+
+
+
+
+
+void read() {
+    char content[100];
+    printf("introdueix qualsevol cosa al teu text:\n");
+    fflush(stdout);
+    scanf("%[^\n]", content);
+    printf("%s", content);
+    arxiu(content);
+}
