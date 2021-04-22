@@ -12,17 +12,14 @@ void guardadoArchivo(char *almacenCaracteres){
 		fprintf(archivo,"%s", almacenCaracteres);
 	}
 	fclose(archivo);
+
+}
+
+void almacenCaracteres(){
+	char almacenCaracteres[100];
+	printf("Introduce un texto (no más de 100 carácteres):\n");
+	scanf("%s",almacenCaracteres);
 }
 
 
 
-
-
-void read() {
-    char content[100];
-    printf("introdueix qualsevol cosa al teu text:\n");
-    fflush(stdout);
-    scanf("%[^\n]", content);
-    printf("%s", content);
-    arxiu(content);
-}
